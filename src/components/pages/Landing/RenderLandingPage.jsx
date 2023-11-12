@@ -86,6 +86,7 @@ function RenderLandingPage(props) {
           </h3>
         </div>
       </div>
+      <h2 className="systemic-heading">Systemic Disparity Insights</h2>
       <div>
         {/* Bottom Section: Add code here for the graphs section for your first ticket */}
         {/* <div className="bottom-section">*/}
