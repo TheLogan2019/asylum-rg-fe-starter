@@ -8,6 +8,7 @@
 @tablet-large: ~"(min-width: 769px) and (max-width: 1024px)";
 @laptop: ~"(min-width: 1025px) and (max-width: 1280px)";
 
+/*Changed height to AUTO on all header classes to fix problem with overlapping header */
 .header {
     background-color: @main-color;
     display:flex;
@@ -41,6 +42,8 @@
     font-size: 1.2rem;
 }
 
+/* start of graph section - graph-section contains divs with graph-container which style the graphs and captions */
+
 .graphs-section {
     display: flex;
     justify-content: space-between;
@@ -62,6 +65,8 @@
 .graph-notes {
     margin-top: 10px;
 }
+/*end of Graph section and start of button section - new buttons are almost
+identical to existing button and are held together in the upper-button-container*/
 
 .upper-button-container {
     display: flex;
@@ -85,6 +90,8 @@
     margin-bottom: 10%;
 }
 
+/*end of upper button section */
+
 .read-more-btn-container {
     height: 44px;
     width: 180px;
@@ -92,6 +99,8 @@
     text-align: center;
     margin-bottom: 10%;
 }
+
+/* end of lower button section - lower button is also almost identical to existing button*/
 
 .middle-section {
     display: flex;
@@ -115,12 +124,16 @@
     font-size: 1.4rem;
 }
 
+/* CSS for systemic Heading - Heading centered and given space on top and bottom*/
+
 .systemic-heading {
     display: flex;
     justify-content: center;
     margin-top: 10%;
     margin-bottom: 10%;
 }
+
+/* start of bottom section - text containers are grouped with the headings in containers aligned inside of bottom-section*/
 
 .bottom-section {
     display: flex;
@@ -145,6 +158,8 @@
     font-size: .75rem;
 }
 
+/* end of bottom section */
+
 .back-to-top {
     width: 8%;
     font-size: 1.2rem;
@@ -154,6 +169,8 @@
     display: block;
     text-align: center;
 }
+
+/* Added a centered text alignment to fix the back to top link */
 
 .ant-space-align-center {
     @media (max-width: 375px) {
