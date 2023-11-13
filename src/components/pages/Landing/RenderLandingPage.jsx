@@ -30,9 +30,7 @@ function RenderLandingPage(props) {
           </h3>
         </div>
       </div>
-
-      {/* Graphs Section: Add code here for the graphs section for your first ticket */}
-
+      {/* Start of Graphs Section. "graphs-section" div contains divs for each graph and caption */}
       <div className="graphs-section">
         <div className="graph-container">
           <img
@@ -59,17 +57,28 @@ function RenderLandingPage(props) {
           <p className="graph-notes">Search Grant Rates Over Time </p>
         </div>
       </div>
-
-      <div className="view-more-data-btn-container">
-        <Button
-          type="default"
-          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-          onClick={() => history.push('/graphs')}
-        >
-          View the Data
-        </Button>
+      {/*End of Graphs Section */}
+      {/*Start of Button Section. "upper-button-container div created to hold existing and new button.*/}
+      <div className="upper-button-container">
+        <div className="view-more-data-btn-container">
+          <Button
+            type="default"
+            style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+            onClick={() => history.push('/graphs')}
+          >
+            View the Data
+          </Button>
+        </div>
+        <div className="download-the-data-btn-container">
+          <Button
+            type="default"
+            style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+          >
+            Download the Data
+          </Button>
+        </div>
       </div>
-
+      {/*End of upper button section */}
       <div className="middle-section">
         <div className="hrf-img-container">
           <img src={HrfPhoto} alt="Human Rights First" className="hrf-img" />
@@ -86,8 +95,10 @@ function RenderLandingPage(props) {
           </h3>
         </div>
       </div>
+      {/*H2 created to house the Systemic caption */}
       <h2 className="systemic-heading">Systemic Disparity Insights</h2>
-      {/* Bottom Section: Add code here for the graphs section for your first ticket */}
+
+      {/* Start of Bottom Section. "Bottom-section" div created to house the section heading and text divs */}
       <div className="bottom-section">
         <div className="section-container">
           <h2 className="section-heading">36%</h2>
@@ -112,6 +123,16 @@ function RenderLandingPage(props) {
             office.
           </p>
         </div>
+      </div>
+      {/*end of bottom section */}
+      {/*read more Button created with same parameters as previous buttons */}
+      <div className="read-more-btn-container">
+        <Button
+          type="default"
+          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+        >
+          Read More
+        </Button>
       </div>
       <div>
         <p onClick={() => scrollToTop()} className="back-to-top">
