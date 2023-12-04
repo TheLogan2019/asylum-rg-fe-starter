@@ -49,6 +49,7 @@ function GraphWrapper(props) {
         break;
     }
   }
+
   async function updateStateWithNewData(
     years,
     view,
