@@ -11,7 +11,7 @@ const LoginButton = () => {
         color: '#FFFFFF',
         border: 'none',
       }}
-      onClick={() => loginWithRedirect}
+      onClick={() => loginWithRedirect()}
       id="qsLoginBtn"
       variant="primary"
       classname="login-btn"
