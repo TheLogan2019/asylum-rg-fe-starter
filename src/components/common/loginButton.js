@@ -6,6 +6,11 @@ const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
   return (
     <Button
+      style={{
+        backgroundColor: '#404C4A',
+        color: '#FFFFFF',
+        border: 'none',
+      }}
       onClick={() => loginWithRedirect}
       id="qsLoginBtn"
       variant="primary"

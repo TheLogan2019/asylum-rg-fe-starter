@@ -11,6 +11,7 @@ import LogoutButton from '../common/logoutButton';
 const { primary_accent_color } = colors;
 
 function HeaderContent() {
+  const { isAuthenticated } = useAuth0();
   return (
     <div
       style={{
@@ -35,9 +36,7 @@ function HeaderContent() {
         <Link to="/graphs" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
           Profile
         </Link>
-        <Link to="/graphs" style={{ color: '#E2F0F7' }}>
-          Login/Logout
-        </Link>
+        {isAuthenticated ? <LogoutButton /> : <LoginButton />}
       </div>
     </div>
   );
