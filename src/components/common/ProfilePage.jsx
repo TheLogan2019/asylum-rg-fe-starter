@@ -7,7 +7,7 @@ function ProfilePage() {
   const displayName = email.split('@')[0];
 
   return (
-    <div className="profileStats">
+    <div className="profileInfo">
       <img src={picture} alt="Profile Pic" />
       <h2>{displayName}</h2>
       <p>{email}</p>
