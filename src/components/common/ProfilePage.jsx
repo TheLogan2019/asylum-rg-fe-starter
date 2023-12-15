@@ -2,13 +2,14 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 function ProfilePage() {
   const { user } = useAuth0();
-  const { name, picture, email } = user;
+  const { picture, email } = user;
+
+  const displayName = email.split('@')[0];
 
   return (
-    <div>
+    <div className="profileStats">
       <img src={picture} alt="Profile Pic" />
-      <h2>{name}</h2>
-      <h2>{name}</h2>
+      <h2>{displayName}</h2>
       <p>{email}</p>
     </div>
   );
