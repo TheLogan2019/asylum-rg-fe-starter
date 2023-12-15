@@ -10,6 +10,10 @@ import LogoutButton from '../common/logoutButton';
 
 const { primary_accent_color } = colors;
 
+//login info for testing:
+//User: test@gmail.com
+//Pass: Test123456789
+
 function HeaderContent() {
   const { isAuthenticated } = useAuth0();
   return (
@@ -33,9 +37,14 @@ function HeaderContent() {
         <Link to="/graphs" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
           Graphs
         </Link>
-        <Link to="/graphs" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
-          Profile
-        </Link>
+        {isAuthenticated ? (
+          <Link
+            to="/profile"
+            style={{ color: '#E2F0F7', paddingRight: '75px' }}
+          >
+            Profile
+          </Link>
+        ) : null}
         {isAuthenticated ? <LogoutButton /> : <LoginButton />}
       </div>
     </div>
