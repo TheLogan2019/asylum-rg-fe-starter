@@ -4,7 +4,10 @@ function ProfilePage() {
   const { user } = useAuth0();
   const { picture, email } = user;
 
-  const displayName = email.split('@')[0];
+  const displayName =
+    email.split('@')[0].charAt(0).toUpperCase() + email.split('@')[0].slice(1);
+
+  //removes the @example.com part of the email and capitalizes the first letter of the remaining piece.
 
   return (
     <div className="profileInfo">
